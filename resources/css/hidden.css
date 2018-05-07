@@ -1,0 +1,54 @@
+/*do not display header on small screens*/
+@media (max-width: 449px) {
+    header {
+        display: none;
+    }
+}
+
+/*do not display anything medium size screens*/
+@media (min-width: 450px) and (max-width:959px) {
+    body {
+        display: none;
+    }
+}
+
+/*display only header on large screens*/
+@media (min-width:960px) {
+    .a {
+        color: yellow;
+    }
+
+    .b {
+        color: green;
+    }
+
+    .c {
+        color: black;
+    }
+
+    header > h1 {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        /*blink feature part a*/
+        font-size: 4em;
+        animation: blinker 1s linear infinite;
+    }
+
+    /*blink feature part b*/
+    @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+
+    nav,
+    footer,
+    #portfolio,
+    #contact,
+    .space,
+    main {
+        display: none;
+        visibility: hidden;
+    }
+}
